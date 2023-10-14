@@ -4,7 +4,7 @@
 # For more information on Data Analysis Techniques not covered here, see the "DATAANALYSIS.md" file.
 
 # Major Questions: (see bottom)
-# What is the average impact of natural disasters on a global scale?
+# What is the average impact of natural disasters on a global scale, and what mitigation strategies might be best.
 # Which countries need immediate attention regarding disaster managment?
 
 # In order to answer those questions, let us ask some simpler questions to analyze these data sets and provde context for the answers below.
@@ -70,6 +70,7 @@ print(f"The most frequently occurring natural disaster in the last decade is '{m
 
 # For this I have to exclude some locations from the data. The data is too broad in some regards, so I excluded the following:
 # If you want to add these back in, just add them by erasing them.
+# I also use this later on.
 excluded_locations = ['World', 'Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America', 'High-income countries', 'Low-income countries', 'Lower-middle-income countries', 'Upper-middle-income countries', 'European Union (27)']
 
 last_decade_death_exclusive = last_decade_death[~last_decade_death['Entity'].isin(excluded_locations)]
@@ -109,6 +110,8 @@ print(f"\nThe average number of natural disaster events per year in the last dec
 # Question 5:
 # To identify the countries that need immediate attention in terms of disaster management, 
 # let's sort the countries based on the total number of deaths caused by natural disasters in the last decade. 
+
+# Had some issues regarding the sort_values needed to make a copy here - fixed the issue.
 last_decade_death_copy = last_decade_death.copy()
 last_decade_death_copy = last_decade_death_copy[~last_decade_death_copy['Entity'].isin(excluded_locations)]
 
@@ -119,7 +122,6 @@ deaths_columns = ["Total deaths - Drought", "Total deaths - Flood", "Total death
 
 # Calculate the total number of deaths by summing all the death columns for each country
 last_decade_death_copy['Total Deaths'] = last_decade_death_copy[deaths_columns].sum(axis=1)
-
 sorted_death_data = last_decade_death_copy.groupby("Entity")["Total Deaths"].sum().sort_values(ascending=False)
 
 # Countries with the highest death toll
@@ -129,12 +131,20 @@ bottom_countries = sorted_death_data.tail(5)
 
 print("\nCountries with the highest death toll:")
 print(top_countries.to_string())
-
 print("\nCountries with the lowest death toll:")
 print(bottom_countries.to_string())
 
-# Answer to Major Question 3:
-# As demosntrated by our analysis in the first question, Dominica had about 368 % of their total GDP represented in damages caused by natural disasters.
+# Answer to Major Question 1:
+# I would say that the effects are obvious. Discplacement. Economic Damage. Death. Recovery Time. All are factors in the analysis of natural disasters.
+# I think in this analysis one of the reasosn that you see more deaths from flooding and more droughts occuring is because these occur more, though in the 
+# data, deaths from earthquakes and volcanic activity is major, it jut isn't frequent, which is of note. So I would say in order to best prepare for 
+# future such events, countries will need to take steps to ensure protection against flooding and drought. Both the watery extremes as they seem to happen
+# the most and cause the most death. For more isolated events such as earthquakes and volcanos, certain steps will also need to be taken, but should be of
+# lower priority.
+
+# Answer to Major Question 2:
+# As demonstrated by our analysis in the first question and 5th, Dominica had about 368 % of their total GDP represented in damages caused by natural disasters.
 # That was only in the last decade alone. I would say that countries taht need our immediate attention are those whose damages from natural disasters
 # exceed about 75 % GDP. The odds of them recovering on their own are not high when it goes above this points, as they can't producce enough to meet 
-# the environmental demand, let alone their own citizens.
+# the environmental demand, let alone their own citizens. Some other nations of note which might require relief are third world nations (excluded beacuse of the broadness in this data set)
+# or developing countries such as India. Other nations such as Italy France, and Spain might also require aid from time to time based on current circumstances.
