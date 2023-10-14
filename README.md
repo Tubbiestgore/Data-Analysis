@@ -50,7 +50,6 @@ The language which I used as mentioned above is Python, I also used the Pandas p
 * [Python .sort()](https://www.geeksforgeeks.org/sort-in-python/)
 * [Python .filter()](https://www.geeksforgeeks.org/filter-in-python/)
 * [What is Numpy](https://numpy.org/doc/stable/user/whatisnumpy.html)
-* [idxmax] (https://www.w3schools.com/python/pandas/ref_df_idxmax.asp)
 * [sort_values](https://www.w3schools.com/python/pandas/ref_df_sort_values.asp)
 
 # Future Work
