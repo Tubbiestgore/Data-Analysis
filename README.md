@@ -2,15 +2,15 @@
 
 Hello! In this project I hope to by utilizing a data set, answer some questions regarding broader natural disasters. How many there are, and in which nations? Where we should allocate our resources, who needs help, and how it has effected countires in the last decade, their GDP, the death rate etc... I also hope to be able to learn more about data analysis through the medium of the python language, a great tool for analyzing data! It provides a wide range of libraries and tools in order to accomplish this important task and is widly regarded as a language of data analysis. Though perhaps not so much as the R programming language.
 
-I am analyzing multiple data sets describing in general the same thing. The impact of natural disasters on mankind. Specifically, the death rate, GDP impact, event type, location, date, and more. They should be included in the file, though I highly recommend a visit to the site which is included below. They have many different options to choose from in regards to this fascinating topiC
+I am analyzing multiple data sets describing in general the same thing. The impact of natural disasters on mankind. Specifically, the death rate, GDP impact, event type, location, date, and more. They should be included in the file, though I highly recommend a visit to the site which is included below. They have many different options to choose from in regards to this fascinating topic.
 
 * [Our World in Data](https://ourworldindata.org/)
 
-{Describe your purpose for writing this software to analyze the data.}
+My purpose in writing this software, was to demonstrate data analysis techniques in order to answer questions about a data set or in this case a group fo data sets with a common theme. This was also to demosntrate how it could be done in the python coding language.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the data set, the questions and answers, the code running and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video]()
 
 # Data Analysis Results
 
