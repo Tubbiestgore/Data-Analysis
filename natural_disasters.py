@@ -1,7 +1,6 @@
 # This will be the main program for analysis of the several files related to natural disasters as found on "https://ourworldindata.org/".
 # In this data set I hope to answer the following Questions within the context of the data itself.
 # As context I want to parse through this data within the last decade.
-# For more information on Data Analysis Techniques not covered here, see the "DATAANALYSIS.md" file.
 
 # Major Questions: (see bottom)
 # What is the average impact of natural disasters on a global scale, and what mitigation strategies might be best.

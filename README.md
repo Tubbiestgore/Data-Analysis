@@ -16,7 +16,7 @@ My purpose in writing this software, was to demonstrate data analysis techniques
 
 ## Questions: 
 
-* What is the average impact of natural disasters on a global scale, and what mitigation strategies might be best.
+* What is the average impact of natural disasters on a global scale, and what mitigation strategies might be best?
 * Which countries need immediate attention regarding disaster managment?
 
 ## Answers:
